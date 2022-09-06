@@ -55,7 +55,7 @@ class _JobApplicationScreenState extends State<JobApplicationScreen> with ToastM
               MemberCard(
                 onTap: () {},
                 hourlyRate: widget.hourly_rate,
-                username: widget.username,
+                username: "${widget.username}",
                 score: widget.score,
                 profilePic: widget.profilePic,
                 hideLikeButton: true,

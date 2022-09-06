@@ -13,6 +13,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:okito/okito.dart';
 
+import '../jobs/job_application/job_application_screen.dart';
+
 class ExploreScreen extends StatefulWidget {
   const ExploreScreen({Key? key}) : super(key: key);
 
@@ -92,9 +94,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                 profilePic: member.profilePic,
                                 location: member.city,
                                 onTap: () {
-                                  Okito.pushNamed(KRoutes.jobApplicationRoute, arguments: {
-                                    "applicant": Applicant.fromMember(member),
-                                  });
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => JobApplicationScreen(
+                                        applicant_name : member.memberName,
+                                        hourly_rate: member.perHourRate,
+                                        username: member.memberId,
+                                        score: member.rating,
+                                        profilePic: member.profilePic,
+                                        memberId: member.memberId,
+                                        saved: member.saved,
+                                        applicant: member,
+                                      )));
                                 },
                               );
                             }),
@@ -125,7 +135,18 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                   profilePic: member.profilePic,
                                   saved: member.saved,
                                   onTap: () {
-                                    Okito.pushNamed(KRoutes.jobApplicationRoute, arguments: {"applicant": Applicant.fromMember(member)});
+                                    //Okito.pushNamed(KRoutes.jobApplicationRoute, arguments: {"applicant": Applicant.fromMember(member)});
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) => JobApplicationScreen(
+                                          applicant_name : member.memberName,
+                                          hourly_rate: member.perHourRate,
+                                          username: member.memberId,
+                                          score: member.rating,
+                                          profilePic: member.profilePic,
+                                          memberId: member.memberId,
+                                          saved: member.saved,
+                                          //applicant: "${member}",
+                                        )));
                                   },
                                 );
                               },
