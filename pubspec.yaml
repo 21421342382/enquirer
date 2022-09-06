@@ -1,0 +1,51 @@
+name: arcopen_enquirer
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.2.2+8
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  path_provider:
+  flutter_dotenv: ^5.0.0
+  okito: ^1.2.4
+  dio: ^4.0.0
+  dio_cookie_manager:
+  double_back_to_close_app:
+  flutter_phosphor_icons: ^0.0.1+5
+  credit_card_input_form: ^2.3.0
+  device_info: ^2.0.2
+  dio_http_cache: ^0.3.0
+  pretty_dio_logger: ^1.1.1
+  logger: ^1.1.0
+  file_picker: ^4.0.2
+  adaptive_action_sheet: ^2.0.0
+  readmore: 
+  url_launcher:
+  simple_moment: ^1.1.1
+  purchases_flutter: ^3.8.0
+  flutter_simple_rating_bar:
+    git:
+      url: https://github.com/docwei2050/flutter_simple_rating_bar
+  
+  phone_code_picker:
+    git:
+      url: https://github.com/stevenosse/phone_code_picker
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  rename: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/images/
